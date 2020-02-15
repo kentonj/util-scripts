@@ -14,6 +14,9 @@ echo "installing zsh"
 sudo apt install zsh -y
 sudo apt-get install powerline fonts-powerline -y
 
+echo "installing VSCode"
+sudo snap install --classic code
+
 echo "installing nvidia driver"
 # install nvidia driver
 sudo apt install nvidia-driver-440 -y 
