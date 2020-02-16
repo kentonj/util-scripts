@@ -4,6 +4,8 @@ echo "updating apt-get and apt"
 sudo apt-get update -y 
 # update apt
 sudo apt upgrade -y 
+# install headers belonging to your current kernel version
+sudo apt-get install linux-headers-$(uname -r)
 
 echo "installing git"
 # install git
@@ -19,7 +21,11 @@ sudo snap install --classic code
 
 echo "installing nvidia driver"
 # install nvidia driver
-sudo apt install nvidia-driver-440 -y 
+sudo add-apt-repository ppa:graphics-drivers -y
+sudo apt-get install nvidia-driver-440 -y
+
+echo "installing gnome tweaks for desktop customization"
+sudo apt install gnome-tweaks
 
 echo "install python3.6, and python3.8"
 # install python3
